@@ -22,59 +22,6 @@
 * figi suszone
 * grejpfrut
 
-# Linki do tabel w Internecie
-[Tabela kaloryczności](https://potrafiszschudnac.pl/diety/tabele-kalorycznosci-produktow/)
-
-[Kalkulator kalorii](https://kalkulatorkalorii.net/tabela-kalorii)
- 
-
-# Import danych z CSV
-
-Co to jest CSV:  
-* 1 plik CSV = tabela
-* to nie jest format Excela
-* csv jest formatem dla programistów
-
-**Każdy plik csv ma parametry:**  
-
-1. kodowanie znaków: przeważnie to będzie UTF-8  
-2. czy ma byc nagłowek? True/False  
-3. Separator (delimiter): przeważnie używany jest  , 
-albo  ;  
-4. Trim spaces? True/False
-5. Quote character: przeważnie uzywany jest " albo '
-ale do wielu tabel nie trzeba tego używać
-6. Opcjonalnie: język (np. polish)  
-7. Oznaczenie nowej linii: są dwa formaty - format 1 unix, format 2 windows
-
-## ustawienia Librecalc
-
-Najpierw musimy stworzyć nowy plik typu .csv  
-w dolphinie idziemy do miejsca w którym chcemy stworzyć plik a następnie dajemy PPM > Create new > text file... 
-plik podpisujemy:  
-**nazwa\_Tabeli.csv**  
-np.  
-**SQL4\_food.csv**  
-
-Następnie otwieramy libre calc i otwieramy plik:  
-File > Open > wybieramy stworzony plik .csv    
-
-Do otwarcia pliku używamy następujących parametrów:  
-
-![](./IMG/csv_librecalc1.png)
-
-## ustawienia SQL
-
-Najpierw otwieramy plik z bazą danych (plik z końcówką   .db)  
-
-a następnie wybieramy:  
-File > import > table from csv file...  
-
-a następnie wybieramy plik typu .csv który chcemy zaimportować (wczytać do bazy)  
-
-Do zaimportowania bazy danych używamy następujących parametrów:  
-
-![](./IMG/csv_sqllite1.png)
 
 # Zapytania SQL
 
