@@ -28,8 +28,8 @@
 * SELECT pokazujący wszystkie produkty należące do rodzaju "owoc" :  
 
 ``` sql
- SELECT nazwa_produktu FROM SQL_4_food WHERE rodzaj='owoc';
- ```
+SELECT nazwa_produktu FROM SQL_4_food WHERE rodzaj='owoc';
+```
 * SELECT pokazujący wszystkie produkty należące do rodzaju "warzywo":
 
 ``` sql
@@ -40,14 +40,13 @@ SELECT nazwa_produktu FROM SQL_4_food WHERE rodzaj ="warzywo";
 
 ``` sql
 SELECT nazwa_produktu FROM SQL_4_food WHERE rodzaj="warzywo"AND kcal<=70;
+```
 
 * SELECT wyświetlający nazwy produktu, rodzaj, białka i tłuszcze
 
- ``` sql
-  SELECT nazwa_produktu FROM SQL_4_food WHERE rodzaj="nasiona"AND białka<=5 AND tłuszcze<=1.2;
- ```
-
-
+``` sql
+SELECT nazwa_produktu FROM SQL_4_food WHERE rodzaj="nasiona"AND białka<=5 AND tłuszcze<=1.2;
+```
 
 * Wszystkie produkty mające np. więcej niż 10 białka
 
@@ -65,16 +64,7 @@ FROM SQL_4_food;
 
 ``` sql
 SELECT nazwa_produktu, rodzaj, (kcal*białka)+(węglowodany-tłuszcze) FROM SQL_4_food;
-
-``` sql
-
 ```
-
-* SELECT liczący ilość kcal dla posiłku składającego się z nast składników:
-100g Ziemniaki gotowane  = 87 kcal  
-100g Schab pieczony = 291 kcal  
-100g Kapusta czerwona = 27 kcal  
-
 
 * wszystkie produkty poniżej 200 kcal
 
@@ -85,6 +75,7 @@ SELECT nazwa_produktu, kcal FROM SQL_4_food WHERE kcal <=200;
 ``` sql
 SELECT nazwa_produktu FROM SQL_4_food WHERE kcal = "owoc" <=200;
 ```
+
 * wszystkie produkty poniżej 100
 
 ``` sql
@@ -108,12 +99,8 @@ SELECT nazwa_produktu FROM SQL_4_food WHERE nazwa_produktu = "0";
 ```
 
 ``` sql
-DELETE FROM SQL_4_food WHERE nazwa_produktu="0";
+DELETE FROM SQL_4_food WHERE nazwa_produktu = "0";
 ```
-
-* wszystkie produkty poniżej 5 tłuszczu
-
-* wszystkie produkty poniżej 20 węglowodanów
 
 * Przykłady innych zapytań
 
@@ -126,13 +113,11 @@ INSERT INTO SQL_4_food (nazwa_produktu, rodzaj,kcal, białka, tłuszcze, węglow
 VALUES ('guma_orbit', 'inne', '50', '3', '2', '10');
 ```
 
-
 ``` sql
 SELECT rodzaj, kcal, białka, tłuszcze, węglowodany
 FROM SQL_4_food
 WHERE rodzaj IS NULL AND węglowodany IS NULL;
 ``` 
-
 
 ``` sql
 SELECT * FROM SQL_4_food WHERE (rodzaj IS NULL AND węglowodany IS NULL) OR (nazwa_produktu ='0' AND rodzaj='0' AND kcal ='0' AND białka ='0' AND tłuszcze ='0' AND węglowodany ='0');
