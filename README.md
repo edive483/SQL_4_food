@@ -105,7 +105,7 @@ DELETE FROM SQL_4_food WHERE nazwa_produktu = "0";
 * Przykłady innych zapytań
 
 ``` sql
-DELETE FROM SQL_4_food WHERE nazwa_produktu="roa";
+DELETE FROM SQL_4_food WHERE nazwa_produktu = "wiśnia";
 ```
 
 ``` sql
