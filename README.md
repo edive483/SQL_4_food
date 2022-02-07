@@ -35,68 +35,76 @@ W bazie danych **baza_danych_SQL4food** można wykonać przykładowe zapytania S
 	
 ## Przykłady dla SELECT
 
-* SELECT pokazujący wszystkie produkty należące do rodzaju "owoc" :  
+* SELECT pokazujący nazwy wszystkich produktów należące do rodzaju "owoc" :  
 
 ``` sql
-SELECT nazwa_produktu FROM SQL_4_food WHERE rodzaj='owoc';
+SELECT nazwa_produktu FROM SQL_4_food WHERE rodzaj="owoc";
 ```
-* SELECT pokazujący wszystkie produkty należące do rodzaju "warzywo":
+* SELECT pokazujący nazwy wszystkich produktów należące do rodzaju "warzywo":  
 
 ``` sql
 SELECT nazwa_produktu FROM SQL_4_food WHERE rodzaj ="warzywo";
 ```
 
-* SELECT pokazujący typ np. warzywo i wszystkie produkty warzywne mające mniej niż 70 kalorii:
+* SELECT pokazujący rodzaj warzywo i wszystkie produkty warzywne mające mniej niż 70 kalorii:  
 
 ``` sql
 SELECT nazwa_produktu FROM SQL_4_food WHERE rodzaj="warzywo"AND kcal<=70;
 ```
 
-* SELECT wyświetlający nazwy produktu, rodzaj, białka i tłuszcze
+* SELECT wyświetlający nazwę produktu w oparcu o określone parametry: rodzaj = "nasiona" oraz białka <= 5 i tłuszcze <=1.2 (trzy warunki muszą być spełnione)  
 
 ``` sql
 SELECT nazwa_produktu FROM SQL_4_food WHERE rodzaj="nasiona"AND białka<=5 AND tłuszcze<=1.2;
 ```
 
-* Wszystkie produkty mające np. więcej niż 10 białka
+* SELECT pokazujący nazwy wszystkich produktów uwzględniające białko równe bądź większe od 10  
 
 ``` sql
 SELECT nazwa_produktu FROM SQL_4_food WHERE białka >=10;
 ```
 
+* SELECT wyświetlający przykładowe obliczenia dla kcal, białek i tłuszczy i odpowiadające im aliasy  
+
 ``` sql
 SELECT 
 kcal+2 AS Gladiator, 
 białka-1 AS Maximus, 
-tłuszcze*(12 + węglowodany/4) AS AGATA 
+tłuszcze*(12 + węglowodany/4) AS Kate
 FROM SQL_4_food;
 ```
+
+* SELECT wyświetlający nazwy wszystkich produktów i rodzaj oraz odpowiadające im obliczenia kcal, białek, węglowodanów i tłuszczy  
 
 ``` sql
 SELECT nazwa_produktu, rodzaj, (kcal*białka)+(węglowodany-tłuszcze) FROM SQL_4_food;
 ```
 
-* wszystkie produkty poniżej 200 kcal
+* SELECT pokazujący nazwy wszystkich produktów w których kcal są <=200  
 
 ``` sql
 SELECT nazwa_produktu, kcal FROM SQL_4_food WHERE kcal <=200;
 ```
 
+* SELECT wyświetlający nazwy wszystkich produktów przypisanych jako produkty niskokaloryczne w przedziale kcal <=200  
+
 ``` sql
-SELECT nazwa_produktu FROM SQL_4_food WHERE kcal = "owoc" <=200;
+SELECT nazwa_produktu AS "produkty niskokaloryczne" FROM SQL_4_food WHERE kcal <=200;
 ```
 
-* wszystkie produkty poniżej 100
+* SELECT wyświetlający nazwy wszystkich produktów z rodzaju warzywo zawierajace kcal <=100  
 
 ``` sql
 SELECT nazwa_produktu FROM SQL_4_food WHERE rodzaj = "warzywo" AND kcal <=100;
 ```
 
+* SELECT wyświetlający nazwy wszystkich produktów z rodzaju owoc zawierające kcal <=50  
+
 ``` sql
 SELECT nazwa_produktu FROM SQL_4_food WHERE rodzaj="owoc" AND kcal <= 50;
 ```
 
-* wszystkie produkty poniżej 10 białka
+* SELECT wyświetlający nazwy wszystkich produktów w których białka są <=10 
 
 ``` sql
 SELECT nazwa_produktu FROM SQL_4_food WHERE "białka" <= 10;
