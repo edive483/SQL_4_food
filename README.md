@@ -28,7 +28,6 @@ Tabela ta zawiera kolumny i rekordy. Dotyczy kaloryczności produktów w 100g.
 Tabela ta zawiera dane dotyczące ceny 100g za określony produkt. Są w niej 2 kolumny:  
 **nazwa_produktu** oraz **cena_zl_za_100g**
 
-
 # Zapytania SQL
 
 W bazie danych **baza_danych_SQL4food** można wykonać przykładowe zapytania SQL:
@@ -49,7 +48,7 @@ SELECT nazwa_produktu FROM SQL_4_food WHERE rodzaj ="warzywo";
 * SELECT pokazujący rodzaj warzywo i wszystkie produkty warzywne mające mniej niż 70 kalorii:  
 
 ``` sql
-SELECT nazwa_produktu FROM SQL_4_food WHERE rodzaj="warzywo"AND kcal<=70;
+SELECT nazwa_produktu FROM SQL_4_food WHERE rodzaj="warzywo" AND kcal<=70;
 ```
 
 * SELECT wyświetlający nazwę produktu w oparcu o określone parametry: rodzaj = "nasiona" oraz białka <= 5 i tłuszcze <=1.2 (trzy warunki muszą być spełnione)  
@@ -92,10 +91,10 @@ SELECT nazwa_produktu, kcal FROM SQL_4_food WHERE kcal <=200;
 SELECT nazwa_produktu AS "produkty niskokaloryczne" FROM SQL_4_food WHERE kcal <=200;
 ```
 
-* SELECT wyświetlający nazwy wszystkich produktów z rodzaju warzywo zawierajace kcal <=100  
+* SELECT wyświetlający nazwy wszystkich produktów z rodzaju konserwy zawierajace kcal <=100  
 
 ``` sql
-SELECT nazwa_produktu FROM SQL_4_food WHERE rodzaj = "warzywo" AND kcal <=100;
+SELECT nazwa_produktu FROM SQL_4_food WHERE rodzaj = "konserwy" AND kcal <=100;
 ```
 
 * SELECT wyświetlający nazwy wszystkich produktów z rodzaju owoc zawierające kcal <=50  
