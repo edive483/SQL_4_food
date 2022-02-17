@@ -54,7 +54,7 @@ CREATE TABLE "SQL_4_food_eng" (
 ## Table B: product_price  
 
 This table contains data on the price of 100g for a specific product and calories. There are 3 columns in it:
-** product_name ** and ** price_PLN_for_100g ** and ** calories **
+**product_name** and **price_PLN_for_100g** and **calories**:
 
 Definition:
 
